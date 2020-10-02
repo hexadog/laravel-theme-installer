@@ -1,5 +1,5 @@
 {
-    "name": "hexadog/theme-installer-plugin",
+    "name": "hexadog/laravel-theme-installer",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [],
