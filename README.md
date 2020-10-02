@@ -2,6 +2,8 @@
 This package is a fork of [Laravel Module Installer](https://github.com/joshbrw/laravel-module-installer) to work with Theme packages.
 It allows installation of standalone Theme package into the `Themes/` directory instead of `vendor/`.
 
+It works well with [shipu/themevel](https://github.com/Shipu/themevel) Laravel theme and asset management package.
+
 You can specify an alternate directory by including a `theme-dir` in the extra data in your composer.json file:
 
     "extra": {
