@@ -1,0 +1,25 @@
+{
+    "name": "hexadog/theme-installer-plugin",
+    "type": "composer-plugin",
+    "authors": [],
+    "autoload": {
+        "psr-0": {
+            "Hexadog\\LaravelThemeInstaller\\": "src/"
+        },
+        "psr-4": {
+            "Hexadog\\LaravelThemeInstaller\\": "src"
+        }
+    },
+    "extra": {
+        "class": "Hexadog\\LaravelThemeInstaller\\ThemeInstallerPlugin"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^8.0"
+    },
+    "require": {
+        "composer-plugin-api": "^1.1",
+        "php": "^7.3"
+    }
+}
