@@ -16,4 +16,4 @@ You can specify an alternate directory by including a `theme-dir` in the extra d
 
 ## Notes
 
-* When working on a theme that is version controlled within an app that is also version controlled, you have to commit and push from inside the Theme directory and then `composer update` within the app itself to ensure that the latest version of your theme (dependant upon constraint) is specified in your composer.lock file.
+When working on a theme that is version controlled within an app that is also version controlled, you have to commit and push from inside the Theme directory and then `composer update` within the app itself to ensure that the latest version of your theme (dependant upon constraint) is specified in your composer.lock file.
