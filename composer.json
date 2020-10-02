@@ -2,7 +2,16 @@
     "name": "hexadog/laravel-theme-installer",
     "type": "composer-plugin",
     "license": "MIT",
-    "authors": [],
+    "support": {
+        "issues": "https://github.com/hexadog/laravel-theme-installer/issues",
+        "source": "https://github.com/hexadog/laravel-theme-installer"
+    },
+    "authors": [
+        {
+            "name": "Gaetan",
+            "email": "gaetan@hexadog.com"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "Hexadog\\LaravelThemeInstaller\\": "src/"
