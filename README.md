@@ -10,7 +10,7 @@ You can specify an alternate directory by including a `theme-dir` in the extra d
 
 ## Installation
 
-1. Ensure you have the `type` set to `laravel-theme` in your module's `composer.json`
+1. Ensure you have the `type` set to `laravel-theme` in your theme's `composer.json`
 2. Require this package: `composer require hexadog/laravel-theme-installer`
 3. Require your bespoke theme using Composer
 
