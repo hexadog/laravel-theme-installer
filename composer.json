@@ -1,6 +1,7 @@
 {
     "name": "hexadog/theme-installer-plugin",
     "type": "composer-plugin",
+    "license": "MIT",
     "authors": [],
     "autoload": {
         "psr-0": {
