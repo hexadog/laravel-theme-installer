@@ -31,5 +31,9 @@
     "require": {
         "composer-plugin-api": "^1.1",
         "php": "^7.3"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:windows": "vendor\\bin\\phpunit"
     }
 }
