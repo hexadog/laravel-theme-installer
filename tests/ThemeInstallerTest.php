@@ -50,7 +50,7 @@ class ThemeInstallerTest extends TestCase
     {
         $mock = $this->getMockPackage('name');
 
-        $this->assertEquals('Themes/Name', $this->test->getInstallPath($mock));
+        $this->assertEquals('themes/Name', $this->test->getInstallPath($mock));
     }
 
     /**
@@ -59,7 +59,7 @@ class ThemeInstallerTest extends TestCase
     public function it_returns_themes_folder_by_default()
     {
         $mock = $this->getMockPackage('vendor/name-theme');
-        $this->assertEquals('Themes/Name', $this->test->getInstallPath($mock));
+        $this->assertEquals('themes/Name', $this->test->getInstallPath($mock));
     }
 
     /**
@@ -69,7 +69,7 @@ class ThemeInstallerTest extends TestCase
     {
         $mock = $this->getMockPackage('vendor/compound-name-theme');
 
-        $this->assertEquals('Themes/CompoundName', $this->test->getInstallPath($mock));
+        $this->assertEquals('themes/CompoundName', $this->test->getInstallPath($mock));
     }
 
     /**

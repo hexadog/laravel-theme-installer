@@ -31,13 +31,13 @@ class ThemeInstaller extends LibraryInstaller
 	protected function getBaseInstallationPath()
 	{
 		if (!$this->composer || !$this->composer->getPackage()) {
-			return 'Themes';
+			return 'themes';
 		}
 
 		$extra = $this->composer->getPackage()->getExtra();
 
 		if (!$extra || empty($extra['theme-dir'])) {
-			return 'Themes';
+			return 'themes';
 		}
 
 		return $extra['theme-dir'];
