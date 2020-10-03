@@ -1,6 +1,6 @@
 # Laravel Theme Installer
 This package is a fork of [Laravel Module Installer](https://github.com/joshbrw/laravel-module-installer) to work with Theme packages.
-It allows installation of standalone Theme package into the `Themes/` directory instead of `vendor/`.
+It allows installation of standalone Theme package into the `themes/` directory instead of `vendor/`.
 
 You can specify an alternate directory by including a `theme-dir` in the extra data in your composer.json file:
 
