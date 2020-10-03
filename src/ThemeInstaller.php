@@ -45,9 +45,9 @@ class ThemeInstaller extends LibraryInstaller
 	
 	/**
 	 * Get the theme name
-	 * 		"something" => "Something"
-	 *		"vendor-name/something" => "Something"
-	 * 		"vendor-name/something-theme" => "Something"
+	 * 		"something" => "something"
+	 *		"vendor-name/something" => "something"
+	 * 		"vendor-name/something-theme" => "something"
 	 * @param PackageInterface $package
 	 * @return string
 	 * @throws \Exception
@@ -59,7 +59,7 @@ class ThemeInstaller extends LibraryInstaller
 
 		$splitNameToUse = explode("-", count($split) >= 2 ? $split[1] : $split[0]);
 
-		return implode('', array_map('ucfirst', array_filter($splitNameToUse, function ($value) {
+		return implode('', array_map('strtolower', array_filter($splitNameToUse, function ($value) {
 			return $value !== "theme";
 		})));
 	}
