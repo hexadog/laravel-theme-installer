@@ -54,6 +54,6 @@ class ThemeInstaller extends LibraryInstaller
 	 */
 	protected function getThemeName(PackageInterface $package)
 	{
-		return str_replace('-theme', '', str_replace('-theme', '', $package->getPrettyName()));
+		return str_replace('-theme', '', str_replace('theme-', '', $package->getPrettyName()));
 	}
 }
