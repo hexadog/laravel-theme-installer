@@ -30,17 +30,15 @@ class ThemeInstaller extends LibraryInstaller
 	 */
 	protected function getBaseInstallationPath()
 	{
-		if (!$this->composer || !$this->composer->getPackage()) {
-			return 'themes';
+		if ($this->composer && $this->composer->getPackage()) {
+			$extra = $this->composer->getPackage()->getExtra();
+
+			if (array_key_exists('theme-dir', $extra)) {
+				return $extra['theme-dir'];
+			}
 		}
 
-		$extra = $this->composer->getPackage()->getExtra();
-
-		if (!$extra || empty($extra['theme-dir'])) {
-			return 'themes';
-		}
-
-		return $extra['theme-dir'];
+		return 'themes';
 	}
 	
 	/**
