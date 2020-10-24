@@ -8,13 +8,13 @@ use Composer\Plugin\PluginInterface;
 
 class ThemeInstallerPlugin implements PluginInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function activate(Composer $composer, IOInterface $io)
-	{
-		$installer = new ThemeInstaller($io, $composer);
+    /**
+     * {@inheritdoc}
+     */
+    public function activate(Composer $composer, IOInterface $io)
+    {
+        $installer = new ThemeInstaller($io, $composer);
 
-		$composer->getInstallationManager()->addInstaller($installer);
-	}
+        $composer->getInstallationManager()->addInstaller($installer);
+    }
 }
