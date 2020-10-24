@@ -5,9 +5,9 @@
 This package is a fork of [Laravel Module Installer](https://github.com/joshbrw/laravel-module-installer) to work with Theme packages.
 It allows installation of standalone Theme package into the `themes/` directory instead of `vendor/`.
 
-For example if your Theme package name is `hexadog/admin-theme` then the package will be installed into `themes/admin` directory.
+For example if your Theme package name is `hexadog/admin-theme` then the package will be installed into `themes/hexadog/admin` directory.
 
-You can specify an alternate directory by including a `theme-dir` in the extra data in your root application's composer.json file:
+You can specify an alternate directory by including a `theme-dir` in the extra data in your composer.json file:
 
     "extra": {
         "theme-dir": "custom"

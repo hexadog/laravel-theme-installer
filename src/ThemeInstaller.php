@@ -24,21 +24,23 @@ class ThemeInstaller extends LibraryInstaller
 	}
 
 	/**
-	 * Get the base path that the theme should be installed into.
-	 * Defaults to themes/ and can be overridden in the root project's composer.json.
+	 * Get the base path that the module should be installed into.
+	 * Defaults to Modules/ and can be overridden in the module's composer.json.
 	 * @return string
 	 */
 	protected function getBaseInstallationPath()
 	{
-		if ($this->composer && $this->composer->getPackage()) {
-			$extra = $this->composer->getPackage()->getExtra();
-
-			if (array_key_exists('theme-dir', $extra)) {
-				return $extra['theme-dir'];
-			}
+		if (!$this->composer || !$this->composer->getPackage()) {
+			return 'themes';
 		}
 
-		return 'themes';
+		$extra = $this->composer->getPackage()->getExtra();
+
+		if (!$extra || empty($extra['theme-dir'])) {
+			return 'themes';
+		}
+
+		return $extra['theme-dir'];
 	}
 	
 	/**
@@ -46,19 +48,12 @@ class ThemeInstaller extends LibraryInstaller
 	 * 		"something" => "something"
 	 *		"vendor-name/something" => "something"
 	 * 		"vendor-name/something-theme" => "something"
-	 * 
 	 * @param PackageInterface $package
-	 * 
 	 * @return string
+	 * @throws \Exception
 	 */
 	protected function getThemeName(PackageInterface $package)
 	{
-		$name = $package->getPrettyName();
-
-		if (($pos = strpos('/', $name)) !== false) {
-			$name = substr($name, 0, $pos + 1);
-		}
-
 		return str_replace('-theme', '', str_replace('theme-', '', $package->getPrettyName()));
 	}
 }
