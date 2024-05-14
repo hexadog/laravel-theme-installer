@@ -24,7 +24,7 @@
         "class": "Hexadog\\LaravelThemeInstaller\\ThemeInstallerPlugin"
     },
     "require-dev": {
-        "composer/composer": "^1.3|^2.2.12",
+        "composer/composer": "^1.3|^2.6.4",
         "mockery/mockery": "^1.4",
         "phpunit/phpunit": "^7.0|^8.0|^9.0"
     },
